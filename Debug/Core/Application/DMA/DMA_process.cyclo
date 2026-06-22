@@ -1,0 +1,6 @@
+../Core/Application/DMA/DMA_process.c:59:6:DMA_Start	1
+../Core/Application/DMA/DMA_process.c:84:6:DMA_Stop	1
+../Core/Application/DMA/DMA_process.c:91:6:DMA_TransferComplete	2
+../Core/Application/DMA/DMA_process.c:133:6:DMA_UserInit	1
+../Core/Application/DMA/DMA_process.c:143:6:DMA_Update	1
+../Core/Application/DMA/DMA_process.c:150:6:DMA_Work	1

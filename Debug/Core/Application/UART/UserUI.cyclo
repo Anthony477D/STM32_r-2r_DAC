@@ -1,0 +1,14 @@
+../Core/Application/UART/UserUI.c:51:6:HAL_UART_RxCpltCallback	4
+../Core/Application/UART/UserUI.c:72:6:ClearRxBuffer	2
+../Core/Application/UART/UserUI.c:83:6:ParserF	11
+../Core/Application/UART/UserUI.c:147:6:UILayer0	2
+../Core/Application/UART/UserUI.c:157:6:UILayerHelpMenu	2
+../Core/Application/UART/UserUI.c:179:6:UISquareInterface	2
+../Core/Application/UART/UserUI.c:205:6:UITriangleInterface	2
+../Core/Application/UART/UserUI.c:231:6:UISawtoothInterface	2
+../Core/Application/UART/UserUI.c:257:6:UITrapeziaInterface	2
+../Core/Application/UART/UserUI.c:284:6:UISetSignal	5
+../Core/Application/UART/UserUI.c:304:6:UISetSignalParam	1
+../Core/Application/UART/UserUI.c:312:6:StarComunication	6
+../Core/Application/UART/UserUI.c:342:6:UserUI_Init	1
+../Core/Application/UART/UserUI.c:355:6:SendMessage	1

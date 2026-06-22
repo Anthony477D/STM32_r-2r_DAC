@@ -16,10 +16,6 @@
   ******************************************************************************
   */
 
-/*
- * Початок роботи над проуктом, перше створення
- *
- */
 
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
@@ -27,6 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "RunTime.h"
 
 /* USER CODE END Includes */
 
@@ -63,6 +60,10 @@ static void MX_TIM1_Init(void);
 static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
+/*
+ * оголошуємо функцію користувача для обробки переривання
+ */
+//void DMA_TransferComplete(DMA_HandleTypeDef *hdma); // help GPT
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -104,12 +105,26 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  /*
+   * 	Виявляється прис створенні переривання в DMA IQRHandler, HAL та CUbeMX не привязує функцію до самого переивання
+   * 	тобто воно відбуваєтся але в нічого не робмть
+   *
+   * 	Данним рядком, ми до адреси ДМА що відповідає за переривання -> hdma_tim1_up.XferCpltCallback
+   * 	привязуємо функцію яку буде використовувати користувач при викоику переривання
+   */
+  //hdma_tim1_up.XferCpltCallback = DMA_TransferComplete; // gpt help init interapt
+
+
+  AppInit();
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  AppRuntime();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -184,7 +199,7 @@ static void MX_TIM1_Init(void)
   htim1.Instance = TIM1;
   htim1.Init.Prescaler = 50000;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 2;
+  htim1.Init.Period = 2000;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -289,7 +304,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
-
+  //GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   /* USER CODE END MX_GPIO_Init_2 */
 }
 
