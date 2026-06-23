@@ -32,6 +32,8 @@
 #include <stdint.h>
 #include "main.h"
 
+#include "Signal_hight.h"
+
 
 typedef struct
 {

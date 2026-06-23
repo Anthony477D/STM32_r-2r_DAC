@@ -5,13 +5,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Core/Application/DMA/DMA_process.c 
+../Core/Application/DMA/DMA_process.c \
+../Core/Application/DMA/TestGenerate.c 
 
 OBJS += \
-./Core/Application/DMA/DMA_process.o 
+./Core/Application/DMA/DMA_process.o \
+./Core/Application/DMA/TestGenerate.o 
 
 C_DEPS += \
-./Core/Application/DMA/DMA_process.d 
+./Core/Application/DMA/DMA_process.d \
+./Core/Application/DMA/TestGenerate.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -21,7 +24,7 @@ Core/Application/DMA/%.o Core/Application/DMA/%.su Core/Application/DMA/%.cyclo:
 clean: clean-Core-2f-Application-2f-DMA
 
 clean-Core-2f-Application-2f-DMA:
-	-$(RM) ./Core/Application/DMA/DMA_process.cyclo ./Core/Application/DMA/DMA_process.d ./Core/Application/DMA/DMA_process.o ./Core/Application/DMA/DMA_process.su
+	-$(RM) ./Core/Application/DMA/DMA_process.cyclo ./Core/Application/DMA/DMA_process.d ./Core/Application/DMA/DMA_process.o ./Core/Application/DMA/DMA_process.su ./Core/Application/DMA/TestGenerate.cyclo ./Core/Application/DMA/TestGenerate.d ./Core/Application/DMA/TestGenerate.o ./Core/Application/DMA/TestGenerate.su
 
 .PHONY: clean-Core-2f-Application-2f-DMA
 

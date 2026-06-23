@@ -1,2 +1,2 @@
-../Core/Application/App/RunTime.c:18:6:AppInit	8	static
-../Core/Application/App/RunTime.c:26:6:AppRuntime	8	static
+../Core/Application/App/RunTime.c:20:6:AppInit	8	static
+../Core/Application/App/RunTime.c:28:6:AppRuntime	8	static

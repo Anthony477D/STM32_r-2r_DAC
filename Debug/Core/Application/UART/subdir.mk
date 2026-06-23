@@ -5,12 +5,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Core/Application/UART/UI_Layer.c \
 ../Core/Application/UART/UserUI.c 
 
 OBJS += \
+./Core/Application/UART/UI_Layer.o \
 ./Core/Application/UART/UserUI.o 
 
 C_DEPS += \
+./Core/Application/UART/UI_Layer.d \
 ./Core/Application/UART/UserUI.d 
 
 
@@ -21,7 +24,7 @@ Core/Application/UART/%.o Core/Application/UART/%.su Core/Application/UART/%.cyc
 clean: clean-Core-2f-Application-2f-UART
 
 clean-Core-2f-Application-2f-UART:
-	-$(RM) ./Core/Application/UART/UserUI.cyclo ./Core/Application/UART/UserUI.d ./Core/Application/UART/UserUI.o ./Core/Application/UART/UserUI.su
+	-$(RM) ./Core/Application/UART/UI_Layer.cyclo ./Core/Application/UART/UI_Layer.d ./Core/Application/UART/UI_Layer.o ./Core/Application/UART/UI_Layer.su ./Core/Application/UART/UserUI.cyclo ./Core/Application/UART/UserUI.d ./Core/Application/UART/UserUI.o ./Core/Application/UART/UserUI.su
 
 .PHONY: clean-Core-2f-Application-2f-UART
 

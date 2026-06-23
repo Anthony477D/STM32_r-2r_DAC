@@ -1,6 +1,4 @@
-Core/Application/App/RunTime.o: ../Core/Application/App/RunTime.c \
- /Users/antondzisenko/Documents/MyDocuments_workspace/STM_Project/SignalGenerator/Core/Application/UART/UserUI.h \
- /Users/antondzisenko/Documents/MyDocuments_workspace/STM_Project/SignalGenerator/Core/Application/DMA/DMA_process.h \
+Core/Application/UART/UI_Layer.o: ../Core/Application/UART/UI_Layer.c \
  ../Core/Inc/main.h ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -29,9 +27,7 @@ Core/Application/App/RunTime.o: ../Core/Application/App/RunTime.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- /Users/antondzisenko/Documents/MyDocuments_workspace/STM_Project/SignalGenerator/Core/Application/DMA/TestGenerate.h
-/Users/antondzisenko/Documents/MyDocuments_workspace/STM_Project/SignalGenerator/Core/Application/UART/UserUI.h:
-/Users/antondzisenko/Documents/MyDocuments_workspace/STM_Project/SignalGenerator/Core/Application/DMA/DMA_process.h:
+ ../Core/Application/UART/UserUI.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -61,4 +57,4 @@ Core/Application/App/RunTime.o: ../Core/Application/App/RunTime.c \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-/Users/antondzisenko/Documents/MyDocuments_workspace/STM_Project/SignalGenerator/Core/Application/DMA/TestGenerate.h:
+../Core/Application/UART/UserUI.h:
